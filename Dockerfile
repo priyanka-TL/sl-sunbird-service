@@ -1,15 +1,15 @@
 FROM node:12
 
-WORKDIR /manage-learn-services/sl-sunbird-service
+WORKDIR /opt/sunbird
 
 #copy package.json file
-COPY package.json /manage-learn-services/sl-sunbird-service
+COPY package.json /opt/sunbird
 
 #install node packges
 RUN npm install
 
 #copy all files 
-COPY . /manage-learn-services/sl-sunbird-service
+COPY . /opt/sunbird
 
 #expose the application port
 EXPOSE 4551
